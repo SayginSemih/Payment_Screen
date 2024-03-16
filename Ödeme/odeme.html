@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kredi Kartı Ödeme Ekranı</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f2f2f2;
+  background-image: url("payment-image.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.container {
+  width: 400px;
+  padding: 10px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #007bff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+}
+
+.card-logo {
+  width: 80px;
+  display: block;
+  margin: 0 auto;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 95%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#cvv{
+    margin-left: 10px;
+    width: 90%;
+}
+
+.form-row {
+  display: flex;
+}
+
+.form-group-half {
+  flex: 1;
+  margin-right: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 4px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXyk_c-fmjXnPKBXPdKwbUGGOYMRB7Fs0yQQ&usqp=CAU" alt="Kredi Kartı Logosu" class="card-logo">
+      </div>
+      <div class="card-body">
+        <form id="payment-form">
+          <div class="form-group">
+            <label for="card-number">Kart Numarası</label>
+            <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" required>
+          </div>
+          <div class="form-group">
+            <label for="card-holder">Kart Sahibi</label>
+            <input type="text" id="card-holder" placeholder="Kart Sahibinin Adı Soyadı" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group-half">
+              <label for="expiry">Son Kullanma Tarihi</label>
+              <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required>
+            </div>
+            <div class="form-group-half">
+              <label for="cvv">CVV</label>
+              <input type="text" id="cvv" placeholder="123" maxlength="3" required>
+            </div>
+          </div>
+          <button type="submit">Ödeme Yap</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
